@@ -1,10 +1,26 @@
+# understand and plan:
+# create dictionary values = {} to index values
+# create list result = [] to append matching integers
+# if already in result list, count. If count equals length of arrays, append
+# to result since it was in all of the arrays
+
+# Execute
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    values = {}
+    result = []
+    for array in arrays:
+        for int in array:
+            if int in values:
+                values[int] += 1
+                if values[int] == len(arrays):
+                    result.append(int)
+            else:
+                values[int] = 1
 
     return result
+
+# Reflection
+# tests passing so meets MVP
 
 
 if __name__ == "__main__":
