@@ -1,4 +1,7 @@
-#  Hint:  You may not need all of these.  Remove the unused functions.
+# Understand and plan:
+# create cache to store route data
+# create list to store routes
+
 class Ticket:
     def __init__(self, source, destination):
         self.source = source
